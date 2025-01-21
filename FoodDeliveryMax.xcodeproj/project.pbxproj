@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1251992D3FBF5B0041E677 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251972D3FBF5B0041E677 /* Country.swift */; };
+		3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */; };
 		AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */; };
 		AFA620502D311F370018E268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA6204F2D311F370018E268 /* Assets.xcassets */; };
 		AFA620532D311F370018E268 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA620522D311F370018E268 /* Preview Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1251972D3FBF5B0041E677 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		AFA620482D311F350018E268 /* FoodDeliveryMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryMaxApp.swift; sourceTree = "<group>"; };
 		AFA6204F2D311F370018E268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				AFA620882D312C260018E268 /* UIExtension.swift */,
+				3F1251972D3FBF5B0041E677 /* Country.swift */,
+				3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -316,7 +322,9 @@
 				AFA620862D312B020018E268 /* WelcomeView.swift in Sources */,
 				AFA620892D312C260018E268 /* UIExtension.swift in Sources */,
 				AFA6208B2D313E4D0018E268 /* SignInView.swift in Sources */,
+				3F1251992D3FBF5B0041E677 /* Country.swift in Sources */,
 				AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */,
+				3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
