@@ -1,5 +1,5 @@
 import SwiftUI
-
+import iPhoneNumberField
 
 struct SignInView: View {
     
@@ -13,14 +13,16 @@ struct SignInView: View {
         ZStack{
             Image("bottom_bg")
                 .resizable()
-                .scaledToFill()
-                .frame(width: .screenWidth, height: .screenWidth)
+                .ignoresSafeArea()
+                
             
             VStack{
                 Image("sign_in_top")
                     .resizable()
                     .scaledToFill()
                     .frame(width: .screenWidth, height: .screenWidth)
+                    .padding(.bottom, 400)
+                    .ignoresSafeArea()
             }
             
             ScrollView{
@@ -52,14 +54,93 @@ struct SignInView: View {
                                     .navigationBarTitleDisplayMode(.inline)
                             }
                         }
+                        iPhoneNumberField("Enter phone number", text: $phoneNumber)
+                            .flagHidden(true)
+                            .flagSelectable(false)
+                            .formatted(true)
+                            .font(UIFont(size: 16, weight: .regular))
+                    }
+                    .padding(.horizontal, 24)
+                    
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.gray.opacity(0.3))
+                        .padding(.horizontal, 30)
+                        .padding(.bottom, 25)
+                    
+                    NavigationLink {
+                        LogInView()
+                    } label: {
+                        Text("Continue with SignIn")
+                            .font(.customfont(.semibold, fontSize: 18))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                            .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
+                            .background(Color(hex: "5383EC"))
+                            .cornerRadius(20)
                     }
                     
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 5)
+                    
+                    
+                    NavigationLink {
+                        SignUpView()
+                    } label: {
+                        Text("Continue with SignUp")
+                            .font(.customfont(.semibold, fontSize: 18))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                            .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
+                            .background(Color.primaryApp)
+                            .cornerRadius(20)
+                    }
+                    
+                    .padding(.horizontal, 20)
+                    
+                    Divider()
+                        .frame(width: 350)
+                    
+                    VStack{
+                        
+                        Text("or connnect with social media")
+                            .font(.customfont(.semibold, fontSize: 16))
+                            .foregroundColor(.textTitle)
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 30)
+                            .padding(.bottom, 15)
+                        
+                        HStack{
+                            
+                            Image("google")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .padding(.trailing,5)
+                            Image("facebook")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .padding(.trailing,5)
+                            Image("apple_logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 42, height: 42)
+                        }
+                    }
                 }
+                .padding(.top, 50)
             }
         }
+        .navigationTitle("")
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    SignInView()
+    NavigationStack {
+        SignInView()
+    }
 }

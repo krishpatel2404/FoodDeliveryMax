@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E392E842D3FCC1D0000EFA2 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 3E392E832D3FCC1D0000EFA2 /* iPhoneNumberField */; };
+		3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392E852D3FCF3A0000EFA2 /* LogInView.swift */; };
+		3E392E882D3FCF4A0000EFA2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */; };
 		3F1251992D3FBF5B0041E677 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251972D3FBF5B0041E677 /* Country.swift */; };
 		3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */; };
 		AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */; };
@@ -42,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E392E852D3FCF3A0000EFA2 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3F1251972D3FBF5B0041E677 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		AFA620482D311F350018E268 /* FoodDeliveryMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E392E842D3FCC1D0000EFA2 /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +177,8 @@
 			children = (
 				AFA620852D312B020018E268 /* WelcomeView.swift */,
 				AFA6208A2D313E4D0018E268 /* SignInView.swift */,
+				3E392E852D3FCF3A0000EFA2 /* LogInView.swift */,
+				3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -201,6 +209,9 @@
 			dependencies = (
 			);
 			name = FoodDeliveryMax;
+			packageProductDependencies = (
+				3E392E832D3FCC1D0000EFA2 /* iPhoneNumberField */,
+			);
 			productName = FoodDeliveryMax;
 			productReference = AFA620482D311F350018E268 /* FoodDeliveryMax.app */;
 			productType = "com.apple.product-type.application";
@@ -273,6 +284,9 @@
 				Base,
 			);
 			mainGroup = AFA6203F2D311F350018E268;
+			packageReferences = (
+				3E392E822D3FCC1D0000EFA2 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			productRefGroup = AFA620492D311F350018E268 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA620862D312B020018E268 /* WelcomeView.swift in Sources */,
+				3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */,
 				AFA620892D312C260018E268 /* UIExtension.swift in Sources */,
 				AFA6208B2D313E4D0018E268 /* SignInView.swift in Sources */,
+				3E392E882D3FCF4A0000EFA2 /* SignUpView.swift in Sources */,
 				3F1251992D3FBF5B0041E677 /* Country.swift in Sources */,
 				AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */,
 				3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */,
@@ -658,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E392E822D3FCC1D0000EFA2 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E392E832D3FCC1D0000EFA2 /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E392E822D3FCC1D0000EFA2 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFA620402D311F350018E268 /* Project object */;
 }

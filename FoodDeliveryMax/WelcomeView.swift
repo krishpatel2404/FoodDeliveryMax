@@ -7,7 +7,7 @@ struct WelcomeView: View {
             Image("welcom_bg")
                 .resizable()
                 .scaledToFill()
-                .frame(width: .infinity, height: .infinity)
+                .ignoresSafeArea()
             
             VStack{
                 Image("app_logo")
@@ -29,7 +29,9 @@ struct WelcomeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 30)
                 
-                NavigationLink(destination: SignInView()){
+                NavigationLink{
+                    SignInView()
+                }label: {
                     Text("Get Started")
                         .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.white)
@@ -37,7 +39,6 @@ struct WelcomeView: View {
                         .frame(minWidth: 0, maxWidth: 330, minHeight: 0, maxHeight: 60)
                         .background(Color.primaryApp)
                         .cornerRadius(15)
-                    
                 }
             }.padding(.top, 380)
         }
@@ -50,5 +51,7 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView()
+    NavigationStack{
+        WelcomeView()
+    }
 }
