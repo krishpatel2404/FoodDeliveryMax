@@ -10,6 +10,8 @@
 		3E392E842D3FCC1D0000EFA2 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 3E392E832D3FCC1D0000EFA2 /* iPhoneNumberField */; };
 		3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392E852D3FCF3A0000EFA2 /* LogInView.swift */; };
 		3E392E882D3FCF4A0000EFA2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */; };
+		3EC0E3FF2D411D24007144DE /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0E3FE2D411D24007144DE /* LineTextField.swift */; };
+		3EC0E4052D41213C007144DE /* ViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0E4042D41213C007144DE /* ViewModel */; };
 		3F1251992D3FBF5B0041E677 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251972D3FBF5B0041E677 /* Country.swift */; };
 		3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */; };
 		AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		3E392E852D3FCF3A0000EFA2 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3EC0E3FE2D411D24007144DE /* LineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		3EC0E4042D41213C007144DE /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
 		3F1251972D3FBF5B0041E677 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		AFA620482D311F350018E268 /* FoodDeliveryMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,7 @@
 				AFA620872D312C100018E268 /* UICommon */,
 				AFA6207F2D3128D00018E268 /* View */,
 				AFA6207E2D3124460018E268 /* Info.plist */,
+				3EC0E4042D41213C007144DE /* ViewModel */,
 				AFA620772D3123FA0018E268 /* Font */,
 				AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */,
 				AFA6204F2D311F370018E268 /* Assets.xcassets */,
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA620882D312C260018E268 /* UIExtension.swift */,
+				3EC0E3FE2D411D24007144DE /* LineTextField.swift */,
 				3F1251972D3FBF5B0041E677 /* Country.swift */,
 				3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */,
 			);
@@ -305,6 +311,7 @@
 			files = (
 				AFA6207C2D31242E0018E268 /* Gilroy-Regular.ttf in Resources */,
 				AFA6207D2D31242E0018E268 /* Gilroy-SemiBold.ttf in Resources */,
+				3EC0E4052D41213C007144DE /* ViewModel in Resources */,
 				AFA620762D3121480018E268 /* LaunchScreen.storyboard in Resources */,
 				AFA620532D311F370018E268 /* Preview Assets.xcassets in Resources */,
 				AFA620502D311F370018E268 /* Assets.xcassets in Resources */,
@@ -334,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA620862D312B020018E268 /* WelcomeView.swift in Sources */,
+				3EC0E3FF2D411D24007144DE /* LineTextField.swift in Sources */,
 				3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */,
 				AFA620892D312C260018E268 /* UIExtension.swift in Sources */,
 				AFA6208B2D313E4D0018E268 /* SignInView.swift in Sources */,
