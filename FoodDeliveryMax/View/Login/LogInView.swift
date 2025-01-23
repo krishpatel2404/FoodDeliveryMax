@@ -18,25 +18,25 @@ struct LogInView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
-                    .padding(.top, 100)
+                    .padding(.bottom, 70)
                 
                 Text("LogIn")
                     .font(.customfont(.semibold, fontSize: 26))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 5)
+                    .padding(.bottom, 10)
                 
                 Text("Enter your email and password")
                     .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 35)
                 
                 Text("Email")
                     .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 3)
+                    .padding(.bottom, 7)
                 
                 TextField("Enter Email", text: $email)
                     .font(.customfont(.semibold, fontSize: 16))
@@ -45,15 +45,15 @@ struct LogInView: View {
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(.gray.opacity(0.3))
-                    .padding(.bottom, 25)
+                    .padding(.bottom, 26)
                 
                 Text("Password")
                     .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 3)
+                    .padding(.bottom, 7)
                 
-                TextField("Enter Password", text: $email)
+                SecureField("Enter Password", text: $password)
                     .font(.customfont(.semibold, fontSize: 16))
                     .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
                 
@@ -70,10 +70,21 @@ struct LogInView: View {
                         .foregroundColor(.primaryText)
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                .padding(.bottom, 25)
+                .padding(.bottom, 20)
+                
+                NavigationLink{
+                    
+                }label: {
+                    Text("Log In")
+                        .font(.customfont(.semibold, fontSize: 18))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
+                        .background(Color.primaryApp)
+                        .cornerRadius(15)
+                }.padding(.bottom, 20)
 
                
-                
                 HStack {
                     Text("Don't have an account?")
                         .font(.customfont(.semibold, fontSize: 16))
@@ -88,8 +99,8 @@ struct LogInView: View {
                     }
                 }
             }
-            .padding(.bottom, 190)
-            .padding(.horizontal, 20)
+            .padding(.bottom, 50)
+            .padding(.horizontal, 25)
             .padding(.bottom, .bottomInsets)
             
             
@@ -110,7 +121,6 @@ struct LogInView: View {
             .padding(.top, 60)
             .padding(.horizontal, 20)
         }
-        
         .navigationTitle("")
         .navigationBarHidden(true)
         .ignoresSafeArea()
@@ -119,5 +129,7 @@ struct LogInView: View {
 }
 
 #Preview {
-    LogInView()
+    NavigationStack{
+        LogInView()
+    }
 }
