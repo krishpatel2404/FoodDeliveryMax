@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SignUpView: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @StateObject var mainVM = MainViewModel.shared;
     @State var username: String = ""
     @State var email: String = ""
     @State var password: String = ""
@@ -16,8 +18,10 @@ struct SignUpView: View {
             VStack{
                 Image("color_logo")
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
                     .frame(width: 50, height: 50)
+                    .padding(.bottom, 70)
+
                 
                 Text("Sign Up")
                     .font(.customfont(.semibold, fontSize: 26))
@@ -107,8 +111,8 @@ struct SignUpView: View {
                 .padding(.leading, -45)
                 .padding(.bottom, 20)
                 
-                NavigationLink{
-                    
+                Button{
+                    mainVM.serviceCallSignUp()
                 }label: {
                     Text("Sign Up")
                         .font(.customfont(.semibold, fontSize: 18))
@@ -125,7 +129,7 @@ struct SignUpView: View {
                         .foregroundColor(.primaryText)
                     
                     NavigationLink {
-                        SignUpView()
+                        LogInView()
                     } label: {
                         Text("LogIn")
                             .font(.customfont(.semibold, fontSize: 16))
@@ -135,9 +139,9 @@ struct SignUpView: View {
                 
                 
             }
-            .padding(.bottom, 50)
             .padding(.horizontal, 25)
             .padding(.bottom, .bottomInsets)
+            .padding(.top, 30)
             
             VStack{
                 HStack{
@@ -155,6 +159,10 @@ struct SignUpView: View {
             }
             .padding(.top, 60)
             .padding(.horizontal, 20)
+        }
+        
+        .alert(isPresented: $mainVM.showError) {
+            Alert(title: Text(Globs.AppName), message: Text( mainVM.errorMessage ), dismissButton: .default(Text("Ok")))
         }
         .navigationBarHidden(true)
         .ignoresSafeArea()

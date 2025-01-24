@@ -103,7 +103,7 @@ struct SignInView: View {
                     
                     VStack{
                         
-                        Text("or connnect with social media")
+                        Text("or connect with social media")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.textTitle)
                             .multilineTextAlignment(.center)

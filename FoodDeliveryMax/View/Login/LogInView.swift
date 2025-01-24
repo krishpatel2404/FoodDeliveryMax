@@ -2,6 +2,8 @@ import SwiftUI
 
 struct LogInView: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @StateObject var loginVM = MainViewModel.shared;
     @State var email : String = ""
     @State var password : String = ""
     
@@ -18,7 +20,7 @@ struct LogInView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
-                    .padding(.bottom, 70)
+                    .padding(.bottom, 120)
                 
                 Text("LogIn")
                     .font(.customfont(.semibold, fontSize: 26))
@@ -72,8 +74,8 @@ struct LogInView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .padding(.bottom, 20)
                 
-                NavigationLink{
-                    
+                Button{
+                    loginVM.serviceCallLogin()
                 }label: {
                     Text("Log In")
                         .font(.customfont(.semibold, fontSize: 18))
@@ -83,8 +85,8 @@ struct LogInView: View {
                         .background(Color.primaryApp)
                         .cornerRadius(15)
                 }.padding(.bottom, 20)
-
-               
+                
+                
                 HStack {
                     Text("Don't have an account?")
                         .font(.customfont(.semibold, fontSize: 16))
@@ -121,7 +123,10 @@ struct LogInView: View {
             .padding(.top, 60)
             .padding(.horizontal, 20)
         }
-        .navigationTitle("")
+        
+        .alert(isPresented: $loginVM.showError) {
+            Alert(title: Text(Globs.AppName), message: Text( loginVM.errorMessage ), dismissButton: .default(Text("Ok")))
+        }
         .navigationBarHidden(true)
         .ignoresSafeArea()
         .navigationBarBackButtonHidden(true)
